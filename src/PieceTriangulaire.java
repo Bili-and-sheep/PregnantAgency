@@ -1,19 +1,14 @@
-public class PieceTriangulaire extends BienImmobilier {
-    public PieceTriangulaire() {
-        super();
-    }
-
+public class PieceTriangulaire extends Piece {
     private double base;
     private double hauteur;
 
-    public PieceTriangulaire(String typePiece, int niveau, double base, double hauteur) {
+    public PieceTriangulaire(TypePiece typePiece, String niveau, double base, double hauteur) {
         super(typePiece, niveau);
         this.base = base;
         this.hauteur = hauteur;
     }
 
-    @Override
     public double getSurface() {
-        return (base * hauteur) / 2; // calcul de la surface pour le triangle
+        return 0.5 * base * hauteur; // Surface d'un triangle
     }
 }

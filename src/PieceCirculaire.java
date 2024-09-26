@@ -1,17 +1,17 @@
-public class PieceCirculaire extends BienImmobilier {
-    public PieceCirculaire() {
-        super();
-    } // Constructeur avec appel au constructeur par défaut
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
+public class PieceCirculaire extends Piece {
     private double rayon;
 
-    public PieceCirculaire(String typePiece, int niveau, double rayon) {
+    public PieceCirculaire(TypePiece typePiece, String niveau, double rayon) {
         super(typePiece, niveau);
         this.rayon = rayon;
     }
 
-    @Override
     public double getSurface() {
-        return Math.PI * rayon * rayon; // calcul de la surface pour le cercle
+        double nombre = Math.PI * rayon * rayon;
+        BigDecimal bd = new BigDecimal(nombre).setScale(2, RoundingMode.HALF_UP);
+        return nombre; // Surface d'un cercle
     }
 }

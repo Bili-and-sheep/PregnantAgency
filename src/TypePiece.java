@@ -9,12 +9,12 @@ public class TypePiece {
 
     private String nom;
     private boolean surfaceHabitable;
-    private boolean piece;
+    private boolean Piece;
 
-    public TypePiece(String nom, boolean surfaceHabitable, boolean piece) {
+    public TypePiece(String nom, boolean surfaceHabitable, boolean Piece) {
         this.nom = nom;
         this.surfaceHabitable = surfaceHabitable;
-        this.piece = piece;
+        this.Piece = Piece;
     }
 
     public String getNom() {
@@ -26,7 +26,7 @@ public class TypePiece {
     }
 
     public boolean isPiece() {
-        return piece;
+        return Piece;
     }
 
     @Override
@@ -34,8 +34,4 @@ public class TypePiece {
         return nom;
     }
 
-    
-    
-
-    
 }
