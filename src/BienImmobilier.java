@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BienImmobilier {
+
     private String rue;
     private String codePostal;
     private String ville;
@@ -12,12 +13,11 @@ public class BienImmobilier {
         this.rue = rue;
         this.codePostal = codePostal;
         this.ville = ville;
-        this.pieces = new ArrayList<>();
+        this.pieces = new ArrayList<>(); // Initialisation de la liste
     }
 
     public BienImmobilier() {
-        // TODO Auto-generated constructor stub
-
+        this.pieces = new ArrayList<>(); // Initialisation de la liste
     }
 
     public String getRue() {
